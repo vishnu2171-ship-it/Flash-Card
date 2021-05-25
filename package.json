@@ -4,6 +4,7 @@
   "description": "Simle web",
   "main": "removeHtml.js",
   "scripts": {
+    "start": "node removeHtml.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

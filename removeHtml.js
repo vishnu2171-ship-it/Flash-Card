@@ -1,6 +1,7 @@
 let http = require('http')
 let url = require('url')
 let fileSystem = require('fs')
+const PORT = process.env.PORT || 5000
 
 let server = http.createServer(function(req,res)
 {
@@ -31,4 +32,4 @@ let server = http.createServer(function(req,res)
 }
 )
 
-server.listen(8080)
+server.listen(PORT)
