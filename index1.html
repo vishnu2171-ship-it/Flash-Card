@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Prompt_box.js"></script>
+
+</head>
+<body>
+    <center>
+    <h1 id="header">
+        
+        <script>
+            let numOne = Math.floor(Math.random() * 10) + 1
+            let numTwo = Math.floor(Math.random() * 10) + 1
+            document.write(numOne + "+" + numTwo)
+            let correctAnswer = numOne + numTwo
+        </script>
+    </h1>
+   
+    <p>Hello Please enter your answer!!!!</p>
+    <input id=inputValue>
+    <button type="submit" onclick="addition()">SUBMIT</button>
+    <button type="button" onclick="reload()">Give a new card</button>
+    <p id="answers"></p>
+</center>
+</body>
+</html>

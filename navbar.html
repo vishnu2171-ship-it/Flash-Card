@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/navbar">Flash Card by Vishnu</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/about">About flash card</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="multiplication">multiplication</a>
+              </li>
+              
+            
+          </div>
+        </div>
+      </nav>
+      <div>
+        <center>
+        
+        <div class="jumbotron">
+          <h1 id="Los">
+            <script>
+              document.write(username)
+            </script>
+          </h1>
+            <h1 id="head" class="display-4"></h1>
+            <h1>Flash Card</h1>
+        <h2 id="header">
+            
+        </h2>
+       
+        <p>Hey Enter Your Answer</p>
+        <input id="value"><br><br>
+        <button type="submit" onclick="addition()" class="btn btn-dark">Submit</button>
+        <button type="button" onclick="reload()" class="btn btn-secondary">Get a New Card</button>
+        <p id="output"></p>
+            
+           
+          </div>
+        </center>
+        </div>
+        <script>
+            let number1 = Math.floor(Math.random() * 20) + 1
+            let number2 = Math.floor(Math.random()* 20) + 1
+            document.getElementById("header").innerHTML = (number1 + "+" + number2)
+            let correct_answer = number1 + number2
+            function addition()
+{
+    let userAnswer = document.getElementById("value").value 
+    if(isNaN(userAnswer))
+    {
+        document.getElementById("output").innerHTML = `Hey '${userAnswer}' is not a number`
+    }
+    else
+    {
+        if(correct_answer == userAnswer)
+        {
+            document.getElementById("output").innerHTML = `Correct: ${number1} + ${number2} = ${correct_answer}`
+        }
+        else
+        {
+            document.getElementById("output").innerHTML = `In Correct: ${number1} + ${number2} = ${correct_answer}, not ${userAnswer}`
+            if(userAnswer == "")
+            {
+                document.getElementById("output").innerHTML = `Cannot Be Blank`
+            }
+        }
+    }
+}
+
+function reload()
+{
+    document.getElementById("value").value = ""
+    document.getElementById("output").innerHTML = ""
+    number1 = Math.floor(Math.random() * 20) + 1
+    number2 = Math.floor(Math.random() * 20) + 1
+    correct_answer = number1 + number2
+    document.getElementById("header").innerHTML = `${number1} + ${number2}`
+}
+            
+       </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

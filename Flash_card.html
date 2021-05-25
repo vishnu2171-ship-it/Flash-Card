@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="flash_card.js"></script>
+</head>
+<body>
+    <div>
+    <center>
+    <h1>Flash Card</h1>
+    <h2 id="header">
+        <script>
+             let number1 = Math.floor(Math.random() * 20) + 1
+             let number2 = Math.floor(Math.random()* 20) + 1
+             document.write(number1 + "+" + number2)
+             let correct_answer = number1 + number2
+        </script>
+    </h2>
+   
+    <p>Hey Enter Your Answer</p>
+    <input id="value"><br><br>
+    <button type="submit" onclick="addition()">SUBMIT</button>
+    <button type="button" onclick="reload()">Get a New Card</button>
+    <p id="output"></p>
+    </center>
+    </div>
+</body>
+</html>
