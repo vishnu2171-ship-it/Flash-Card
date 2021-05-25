@@ -1,0 +1,19 @@
+{
+  "name": "javascript_web",
+  "version": "14.6.0",
+  "description": "Simle web",
+  "main": "removeHtml.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishnu2171-ship-it/Flash-Card.git"
+  },
+  "author": "Vishnu Mupparathy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vishnu2171-ship-it/Flash-Card/issues"
+  },
+  "homepage": "https://github.com/vishnu2171-ship-it/Flash-Card#readme"
+}
